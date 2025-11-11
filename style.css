@@ -1,0 +1,1218 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh;
+    background-image: url('wb3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .logo {
+        max-width: 120px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        padding: 5px;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        height: 50px;
+        z-index: 1000;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        padding: 10px;
+        box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    nav a {
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .one, .two, .three, .four, .five, .six, .eight, .nine, .ten, .eleven {
+        max-width: 100%;
+        margin: 5px 0;
+        display: block;
+    }
+
+    .jollibee, .genosi, .moondish, .serenitea, .unk1, .zenth, .momo, .bigchill, .hotelceleste, .seafood, .ssasc {
+        max-width: 60px;
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .nsf, .iso {
+        max-width: 80px;
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+
+    main {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .content, .c1, .c2, .c3, .c4, .c5, .c6 {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 100px;
+        margin-left: 5px;
+    }
+
+    nav a {
+        padding: 5px;
+        margin: 0 2px;
+        font-size: 12px;
+    }
+
+    .one, .two, .three, .four, .five, .six, .eight, .nine, .ten, .eleven {
+        max-width: 100%;
+        margin: 2px 0;
+    }
+
+    .jollibee, .genosi, .moondish, .serenitea, .unk1, .zenth, .momo, .bigchill, .hotelceleste, .seafood, .ssasc {
+        max-width: 50px;
+        margin: 2px;
+    }
+
+    .nsf, .iso {
+        max-width: 60px;
+    }
+
+    .content, .c1, .c2, .c3, .c4, .c5, .c6 {
+        padding: 5px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+
+    .social-icon {
+        font-size: 14px;
+    }
+}
+
+.logo {
+    max-width: 150px; 
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-items: right;
+}
+
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.one, .two, .three, .four, .five, .six {
+    max-width: 430px;
+    flex: 1 1 calc(33.333% - 10px);
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.four {
+    max-width: 430px;
+    margin-top: 5px;
+    margin-left: 20px;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.five {
+    max-width: 430px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.six {
+    max-width: 430px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.eight {
+    max-width: 430px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.nine {
+    max-width: 430px;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.ten {
+    max-width: 430px;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.eleven {
+    max-width: 430px;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.jollibee {
+    max-width: 80px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.genosi {
+    max-width: 100px; 
+    float: left;
+    margin-right: 30px;
+    margin-top: 50px;
+}
+
+.moondish {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.serenitea {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.unk1 {
+    max-width: 70px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.zenth {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.momo {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.bigchill {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.hotelceleste {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.seafood {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.ssasc {
+    max-width: 100px; 
+    float: left;
+    margin-right: 20px;
+    margin-top: 30px;
+    display: flex;
+}
+
+
+
+
+.nsf {
+    max-width: 100px; 
+    float: right;
+}
+
+.iso {
+    max-width: 150px; 
+    float: left;
+}
+
+
+
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.one {
+    transition: transform 0.5s ease;
+}
+
+.one:hover {
+    animation: popOut 0.6s ease;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.two {
+    transition: transform 0.5s ease;
+}
+
+.two:hover {
+    animation: popOut 0.6s ease;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.three {
+    transition: transform 0.5s ease;
+}
+
+.three:hover {
+    animation: popOut 0.6s ease;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.four {
+    transition: transform 0.5s ease;
+}
+
+.four:hover {
+    animation: popOut 0.6s ease;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.five {
+    transition: transform 0.5s ease;
+}
+
+.five:hover {
+    animation: popOut 0.6s ease;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.six {
+    transition: transform 0.5s ease;
+}
+
+.six:hover {
+    animation: popOut 0.6s ease;
+}
+
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.jollibee {
+    transition: transform 0.3s ease;
+}
+
+.jollibee:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.genosi {
+    transition: transform 0.3s ease;
+}
+
+.genosi:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.moondish {
+    transition: transform 0.3s ease;
+}
+
+.moondish:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.serenitea {
+    transition: transform 0.3s ease;
+}
+
+.serenitea:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.unk1 {
+    transition: transform 0.3s ease;
+}
+
+.unk1:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.zenth {
+    transition: transform 0.3s ease;
+}
+
+.zenth:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.momo {
+    transition: transform 0.3s ease;
+}
+
+.momo:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.bigchill {
+    transition: transform 0.3s ease;
+}
+
+.bigchill:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.hotelceleste {
+    transition: transform 0.3s ease;
+}
+
+.hotelceleste:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+
+}
+
+.seafood {
+    transition: transform 0.3s ease;
+}
+
+.seafood:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.ssasc {
+    transition: transform 0.3s ease;
+}
+
+.ssasc:hover {
+    animation: zoomIn 0.5s ease;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    padding: 10px;
+    opacity: 0.9;
+    border-bottom: 2px solid #00d4ff;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #00d4ff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+nav a {
+    color: #00d4ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    border: 1px solid #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: #1a1a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.6);
+}
+
+main {
+    display: flex;
+}
+
+.content, .c1 {
+    border: 2px solid #ccc;
+    border-radius: 5px; 
+    padding: 5px; 
+    padding-left: 15px;
+    color: blue;
+    background-color: whitesmoke;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    opacity: 0.8;
+}
+
+.content, .c2 {
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    padding: 5px; 
+    background-color: darkblue; 
+    text-align: center;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    opacity: 0.8;
+}
+
+.content, .c3 {
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    padding: 20px; 
+    color: blue;
+    background-color: whitesmoke;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    opacity: 0.8;
+}
+
+.content, .c4 {
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    padding: 20px; 
+    background-image: url('seven.jpg');
+    color: blue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    opacity: 0.8;
+}
+
+.content, .c5 {
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    padding: 20px; 
+    color: blue;
+    background-color: whitesmoke;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    opacity: 0.8;
+}
+
+.content, .c6 {
+    border: 2px solid #ccc;
+    border-radius: 10px; 
+    padding: 10px; 
+    color: blue;
+    background-color: whitesmoke;
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    opacity: 0.8;
+}
+
+header {
+    background-color: transparent;
+    color: blue;
+    text-align: center;
+    font-size: small;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header i {
+    margin-right: 5px;
+    color: white;
+}
+
+
+footer {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #00d4ff;
+    text-align: center;
+    font-size: small;
+    padding: 20px;
+    opacity: 0.9;
+    border-top: 2px solid #00d4ff;
+    box-shadow: 0 -4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer i {
+    margin-right: 5px;
+    color: white;
+}
+
+.footer-divider {
+    border-top: 1px solid white;
+    margin: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: yellow;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: yellow;
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+}
+
+/* Add animations and transitions */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+}
+
+main {
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer {
+    animation: slideUp 0.8s ease-out 0.5s both;
+}
+
+/* Text effects */
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: text-shadow 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #ff8c00;
+}
+
+/* Static images container */
+.static-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Style for static images */
+.static-image {
+    max-width: 430px;
+    flex: 1 1 calc(33.333% - 10px);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0.9;
+    transition: transform 0.5s ease;
+}
+
+.static-image:hover {
+    animation: popOut 0.6s ease;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Futuristic Styles for Home Page */
+.futuristic-hero {
+    background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+    animation: slideInFromTop 1s ease-out;
+}
+
+.futuristic-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+    animation: shimmer 4s infinite;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.futuristic-gallery {
+    background: linear-gradient(135deg, #0f0f23, #1a1a2e);
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.futuristic-image {
+    border: 1px solid #00d4ff;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.futuristic-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.futuristic-image:hover::before {
+    left: 100%;
+}
+
+.futuristic-image:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 212, 255, 0.6);
+    border-color: #0099cc;
+}
+
+.futuristic-section {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.futuristic-section:nth-child(even) {
+    animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.futuristic-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.05), transparent);
+    animation: shimmer 6s infinite;
+}
+
+.glow-text {
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.6);
+    font-size: 2.2em;
+    margin: 0;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.6); }
+    to { text-shadow: 0 0 30px rgba(0, 212, 255, 1), 0 0 60px rgba(0, 212, 255, 0.8); }
+}
+
+.animated-text {
+    color: #ffffff;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 15px;
+    animation: fadeInUp 2s ease-out;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.futuristic-marquee {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 204, 0.1));
+    border: 1px solid #00d4ff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.futuristic-logo {
+    border: 1px solid #00d4ff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.futuristic-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+    border-color: #0099cc;
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.futuristic-cert {
+    border: 2px solid #00d4ff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.futuristic-cert:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+}
+
+/* Scroll reveal animations */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments for futuristic elements */
+@media (max-width: 768px) {
+    .futuristic-hero, .futuristic-section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .glow-text {
+        font-size: 1.8em;
+    }
+
+    .futuristic-gallery {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .futuristic-image {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .product-images {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glow-text {
+        font-size: 1.5em;
+    }
+
+    .animated-text {
+        font-size: 1em;
+    }
+
+    .futuristic-image {
+        flex: 1 1 100%;
+    }
+}

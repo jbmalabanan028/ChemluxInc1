@@ -1,0 +1,394 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('wb3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+/* Responsive adjustments for futuristic elements */
+@media (max-width: 768px) {
+    .futuristic-section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .glow-text {
+        font-size: 2em;
+    }
+
+    .animated-text {
+        font-size: 1em;
+    }
+
+    .logo {
+        max-width: 120px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        padding: 5px 10px;
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glow-text {
+        font-size: 1.5em;
+    }
+
+    .animated-text {
+        font-size: 0.9em;
+    }
+
+    .logo {
+        max-width: 100px;
+        margin-left: 5px;
+    }
+
+    nav a {
+        padding: 5px;
+        margin: 0 2px;
+        font-size: 12px;
+    }
+
+    .futuristic-section {
+        padding: 15px;
+        margin: 5px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+
+    .social-icon {
+        font-size: 14px;
+    }
+}
+
+.logo {
+    max-width: 150px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-items: right;
+}
+
+nav {
+    display: 100px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    padding: 10px;
+    opacity: 0.9;
+    border-bottom: 2px solid #00d4ff;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+nav a {
+    color: #00d4ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    border: 1px solid #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: #1a1a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.6);
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.futuristic-section {
+    background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    flex: 1;
+}
+
+.futuristic-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.glow-text {
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.6);
+    font-size: 2.5em;
+    margin: 0;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.6); }
+    to { text-shadow: 0 0 30px rgba(0, 212, 255, 1), 0 0 60px rgba(0, 212, 255, 0.8); }
+}
+
+.animated-text {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-post {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-post:last-child {
+    border-bottom: none;
+}
+
+.pinned {
+    background: linear-gradient(135deg, #e8f4fd, #d1ecf1);
+    border: 2px solid #00d4ff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+.pin-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #00d4ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+    }
+}
+
+.news-post h2 {
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+.news-image {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-post .date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.news-post p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-post a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.news-post a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #00d4ff;
+    text-align: center;
+    font-size: small;
+    padding: 20px;
+    opacity: 0.9;
+    border-top: 2px solid #00d4ff;
+    box-shadow: 0 -4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer i {
+    margin-right: 5px;
+    color: white;
+}
+
+.footer-divider {
+    border-top: 1px solid white;
+    margin: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: yellow;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: yellow;
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+}
+
+/* Add animations and transitions */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+}
+
+main {
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer {
+    animation: slideUp 0.8s ease-out 0.5s both;
+}
+
+/* Text effects */
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: text-shadow 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #ff8c00;
+}
